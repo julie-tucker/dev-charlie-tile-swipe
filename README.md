@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Tile Swipe
 > A 2048-style merging game
 
@@ -33,3 +34,6 @@ Step into adventure as the Brave Knight vs. The Dumb Dragon. Watch out for the D
 - finally, create & link to sprint 99/future ideas
   - create a milestone: sprint 99
   - create at least 3 issues for future ideas & label them as sprint 99 milestone 
+=======
+# dev-charlie-tile-swipe
+>>>>>>> 73b69b88d0c4dbe5b4dc9d800aaf033093c91c5a
