@@ -1,0 +1,189 @@
+/*  google font  */
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap');
+
+/* used grok ai for color palette  */
+body {
+  background-color: #F7F1E9;
+  color: #4A3F35;
+  font-family: 'Source Serif 4', serif;
+  line-height: 1.6;
+}
+
+.navbar {
+  background-color: #5C4B3C !important;
+}
+
+.btn-primary {
+  background-color: #D9795C;
+  border-color: #D9795C;
+}
+
+.btn-primary:hover {
+  background-color: #c4664c;
+  border-color: #c4664c;
+}
+
+.btn-success {
+  background-color: #C98986;
+  border-color: #C98986;
+  color: #fff;
+}
+
+.btn-success:hover {
+  background-color: #b87774;
+  border-color: #b87774;
+  color: #fff;
+
+}
+
+.btn-outline-light:hover {
+  background-color: #D9795C;
+  border-color: #D9795C;
+  color: white;
+}
+
+footer a {
+  color: #D9795C;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer a {
+  font-size: 0.9rem;
+  margin: 0 12px;
+}
+
+footer .bi {
+  font-size: 0.95rem;
+  margin-right: 4px;
+}
+
+
+/*  used grok ai to fix the color issue when clicking the buttons; buttons would turn blue/green for a split second after being clicked  */
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:focus-visible {
+  background-color: #c4664c !important;
+  border-color: #c4664c !important;
+  box-shadow: none !important;
+}
+
+.btn-success:focus,
+.btn-success:active,
+.btn-success:focus-visible {
+  background-color: #b87774 !important;
+  border-color: #b87774 !important;
+  color: #fff !important;
+  box-shadow: none !important;
+}
+
+.btn-outline-light:focus,
+.btn-outline-light:active,
+.btn-outline-light:focus-visible {
+  background-color: #D9795C !important;
+  border-color: #D9795C !important;
+  color: white !important;
+  box-shadow: none !important;
+}
+
+.tile {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: 8px;
+}
+/* leaderboard */
+.leaderboard {
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 24px;
+  background-color: #fffaf4;
+  border: 1px solid #e8e0d5;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(74, 63, 53, 0.08);
+  color: #4A3F35;
+  text-align: left;
+}
+
+.leaderboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #D9795C;
+}
+
+.leaderboard-header i {
+  font-size: 1.4rem;
+}
+
+.leaderboard-header h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.leaderboard-subtitle {
+  margin: 8px 0 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #78695c;
+}
+
+.best-score {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  background-color: #f3e3dc;
+  border-radius: 8px;
+  margin-bottom: 22px;
+}
+
+.best-score strong {
+  color: #c4664c;
+  font-size: 1.5rem;
+}
+
+.top-scores-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.leaderboard-list {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.leaderboard-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  margin-bottom: 7px;
+  background-color: #f2ece4;
+  border-radius: 6px;
+}
+
+.leaderboard-list li:first-child {
+  background-color: #f0d6ca;
+  font-weight: 700;
+}
+
+.leaderboard-list .leaderboard-empty {
+  justify-content: center;
+  color: #78695c;
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-align: center;
+}

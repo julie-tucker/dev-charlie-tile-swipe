@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Play Tile Swipe, a colorful tile-merging puzzle game.">
+  <title>Tile Swipe | Full Game</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/full-game.css">
+</head>
+
+<body class="full-game-page">
+  <nav class="navbar navbar-expand-lg game-navbar">
+    <div class="container">
+      <a class="navbar-brand game-brand" href="../index.html">
+        <span class="brand-icon"><i class="bi bi-grid-3x3-gap-fill"></i></span>
+        tile swipe<span class="brand-period">.</span>
+      </a>
+
+      <div class="d-flex align-items-center gap-2 ms-auto">
+        <a href="concept.html" class="nav-link concept-link">Concept version</a>
+        <span class="version-pill"><i class="bi bi-stars"></i> Full game</span>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container game-container">
+
+
+    <section id="name-section" class="name-card">
+      <div class="name-card-icon"><i class="bi bi-balloon-heart-fill"></i></div>
+      <p class="eyebrow">TILE SWIPE - FULL GAME</p>
+      <h2>Enter your name</h2>
+
+      <form id="name-form" class="name-form">
+        <label for="player-name" class="visually-hidden">Your name</label>
+        <input
+          id="player-name"
+          class="form-control name-input"
+          type="text"
+          maxlength="18"
+          placeholder="Enter your name..."
+          autocomplete="given-name"
+          required
+        >
+        <button class="btn coral-button" type="submit">
+          Let's play <i class="bi bi-arrow-right"></i>
+        </button>
+      </form>
+      <button id="guest-btn" class="guest-button" type="button">Play as a guest</button>
+    </section>
+
+    <section id="game-section" class="game-layout d-none">
+      <div class="game-main">
+        <div class="player-greeting">
+          <div>
+            <h2 id="greeting">Player <span>♡</span></h2>
+          </div>
+          <div class="target-chip"><i class="bi bi-stars"></i> Goal: 2048</div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card score-card">
+            <span class="stat-label"><i class="bi bi-lightning-charge-fill"></i> SCORE</span>
+            <strong id="score">0</strong>
+            <span id="score-pop" class="score-pop" aria-live="polite"></span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label"><i class="bi bi-trophy-fill"></i> BEST</span>
+            <strong id="best-score">0</strong>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label"><i class="bi bi-arrow-left-right"></i> MOVES</span>
+            <strong id="move-count">0</strong>
+          </div>
+        </div>
+
+        <div class="progress-area">
+          <div class="progress-copy">
+            <span>Your journey to 2048</span>
+            <strong id="highest-tile">Highest tile: 2</strong>
+          </div>
+          <div
+            class="progress progress-track"
+            role="progressbar"
+            aria-label="Progress toward the 2048 tile"
+            aria-valuemin="0"
+            aria-valuemax="2048"
+            aria-valuenow="0"
+            id="progress-track"
+          >
+            <div id="progress-bar" class="progress-bar"></div>
+          </div>
+        </div>
+
+        <div class="board-shell">
+          <div class="board-topline">
+            <span><i class="bi bi-grid-fill"></i> THE BOARD</span>
+            <span class="keyboard-tip"><i class="bi bi-keyboard"></i> Arrow keys or WASD</span>
+          </div>
+          <div
+            id="game-board"
+            class="game-board"
+            role="grid"
+            aria-label="Tile Swipe game board"
+            aria-live="polite"
+          ></div>
+          <div id="board-message" class="board-message" aria-live="polite">
+            You've got this. Make your first move!
+          </div>
+        </div>
+
+        <div class="game-actions">
+          <button id="undo-btn" class="btn action-button" type="button">
+            <i class="bi bi-arrow-counterclockwise"></i> Undo
+          </button>
+          <button id="hint-btn" class="btn action-button hint-button" type="button">
+            <i class="bi bi-lightbulb-fill"></i> Hint
+          </button>
+          <button id="reset-btn" class="btn action-button reset-button" type="button">
+            <i class="bi bi-arrow-clockwise"></i> New game
+          </button>
+        </div>
+
+        <div class="mobile-controls" aria-label="Move tiles">
+          <button type="button" data-dir="up" aria-label="Move up"><i class="bi bi-arrow-up"></i></button>
+          <div>
+            <button type="button" data-dir="left" aria-label="Move left"><i class="bi bi-arrow-left"></i></button>
+            <button type="button" data-dir="down" aria-label="Move down"><i class="bi bi-arrow-down"></i></button>
+            <button type="button" data-dir="right" aria-label="Move right"><i class="bi bi-arrow-right"></i></button>
+          </div>
+        </div>
+
+        
+      </div>
+
+      <aside class="game-sidebar">
+        <section class="sidebar-card leaderboard-card">
+          <div class="sidebar-heading">
+            <div class="sidebar-icon"><i class="bi bi-trophy-fill"></i></div>
+            <div>
+              <h3>Hall of fame</h3>
+              <p>Your best scores for this session</p>
+            </div>
+          </div>
+          <ol id="leaderboard-list" class="leaderboard-list">
+            <li class="empty-leaderboard">Your first high score could be here!</li>
+          </ol>
+          <p class="leaderboard-note"><i class="bi bi-info-circle"></i> Scores are saved in this browser session.</p>
+        </section>
+
+        <section class="sidebar-card how-card">
+          <div class="sidebar-heading">
+            <div class="sidebar-icon pink-icon"><i class="bi bi-controller"></i></div>
+            <div>
+              <h3>How to play</h3>
+            </div>
+          </div>
+          <div class="how-step">
+            <span class="step-number">01</span>
+            <p><strong>Swipe around</strong><br>Use arrow keys, WASD, or the buttons.</p>
+          </div>
+          <div class="how-step">
+            <span class="step-number">02</span>
+            <p><strong>Match the numbers</strong><br>Two matching tiles merge when they meet.</p>
+          </div>
+          <div class="how-step">
+            <span class="step-number">03</span>
+            <p><strong>Reach 2048</strong><br>Keep combining tiles to hit the goal.</p>
+          </div>
+        </section>
+
+      </aside>
+    </section>
+  </main>
+
+  <footer class="game-footer">
+    <div class="container footer-inner">
+      <div>
+        <a href="https://github.com/julie-tucker/dev-charlie-tile-swipe" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-github"></i> GitHub repo
+        </a>
+        <a href="https://github.com/julie-tucker" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-person-circle"></i> My profile
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="gameModal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content game-modal">
+        <div class="modal-body text-center">
+          <div id="modal-icon" class="modal-icon"><i class="bi bi-stars"></i></div>
+          <p class="eyebrow" id="modal-eyebrow">THAT WAS A GOOD RUN</p>
+          <h2 id="modalTitle">Look at you go!</h2>
+          <p id="modalMessage">Every move counts.</p>
+          <div class="modal-score"><span>FINAL SCORE</span><strong id="final-score">0</strong></div>
+          <div class="d-grid gap-2 mt-4">
+            <button id="modal-new-game" class="btn coral-button" type="button" data-bs-dismiss="modal">
+              <i class="bi bi-arrow-repeat"></i> Play again
+            </button>
+            <button id="keep-playing-btn" class="btn modal-secondary d-none" type="button" data-bs-dismiss="modal">
+              Keep playing
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/full.js"></script>
+</body>
+</html>

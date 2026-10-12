@@ -1,0 +1,16 @@
+{
+  "_comment": "Documented using Lucid for VS Code: https://marketplace.visualstudio.com/items?itemName=LucidSoftware.lucidforvscode",
+  "diagrams": [
+    {
+      "documentId": "902f00fa-96f6-473a-b6ba-eb8f9d0c9d60",
+      "title": "dev charlie wireframe",
+      "pages": [
+        {
+          "id": "0_0",
+          "title": "Page 1",
+          "actionHistoryLength": 1130
+        }
+      ]
+    }
+  ]
+}
