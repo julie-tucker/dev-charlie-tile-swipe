@@ -78,9 +78,10 @@ function checkWin() {
 }
 ```
 
-### links & reports using Nu & Lighthouse
+### Links to Nu and Lighthouse reports
+- [Nu Report](https://github.com/julie-tucker/dev-charlie-tile-swipe/wiki/Nu-Html-Report)
+- [Lighthouse Report](https://github.com/julie-tucker/dev-charlie-tile-swipe/wiki/Lighthouse-Report)
 
 
-### finally, create & link to sprint 99/future ideas
-  - create a milestone: sprint 99
-  - create at least 3 issues for future ideas & label them as sprint 99 milestone 
+### Sprint 99 Link
+  - [Sprint 99](https://github.com/julie-tucker/dev-charlie-tile-swipe/milestone/1)
